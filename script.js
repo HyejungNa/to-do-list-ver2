@@ -54,6 +54,10 @@ function createToDoElement(item) {
     saveToDos();
   });
 
+  inputEl.addEventListener("blur", () => {
+    inputEl.setAttribute("disabled", true);
+  });
+
   const actionsEl = document.createElement("div");
   actionsEl.classList.add("actions");
 
